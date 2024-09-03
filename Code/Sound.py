@@ -2,14 +2,12 @@ from dotenv import load_dotenv
 import openal
 import os
 load_dotenv()
-path = os.getenv("RUTA")
+path = os.path.abspath(os.getenv("sounds_path"))
 
-class Sonido:
-  def __init__(self, sonido):
+class Sound:
+  def __init__(self, sonido, posicion, ganancia, velocidad):
     openal.oalInit()
     self.buffer = openal.oalOpen('/'.join([path, sonido]))
-  
-  def configuracion(self, posicion, ganancia, velocidad):
     self.buffer.set_position(posicion)
     self.buffer.set_gain(ganancia)
     self.buffer.set_velocity(velocidad)
