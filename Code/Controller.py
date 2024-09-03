@@ -9,8 +9,8 @@ def main():
   key_history = narrative[current_history_part]
   story = History(key_history["text"], key_history["sounds"], key_history["options"])
   sound = Sound(story.sonido, key_history["sounds_config"][0], key_history["sounds_config"][1], key_history["sounds_config"][2])
-  sound.reproducir()
-  print(story)
+  story.print_story()
+  sound.play()
   key_option = int(input())
   
   #Ciclo que itera la historia, hasta el final
@@ -19,8 +19,8 @@ def main():
     key_history = narrative[current_history_part]
     story = History(key_history["text"], key_history["sounds"], key_history["options"])
     sound = Sound(story.sonido, key_history["sounds_config"][0], key_history["sounds_config"][1], key_history["sounds_config"][2])
-    sound.reproducir()
-    print(story)
+    story.print_story()
+    sound.play()
     key_option = int(input())
     
   

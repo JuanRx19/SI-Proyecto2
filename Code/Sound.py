@@ -12,7 +12,7 @@ class Sound:
     self.buffer.set_gain(ganancia)
     self.buffer.set_velocity(velocidad)
   
-  def reproducir(self):
+  def play(self):
     self.buffer.play()
     while self.buffer.get_state() == openal.AL_PLAYING:
       pass
