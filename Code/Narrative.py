@@ -16,7 +16,8 @@ def get_narrative():
         "sounds_config": [(10, 0, 0), 0.7, (0, 0, 0)],
         "options": {
             1: {"text": "Entrar a la cueva", "siguiente": "cueva"},
-            2: {"text": "Regresar al bosque", "siguiente": "inicio"}
+            2: {"text": "Regresar al bosque", "siguiente": "inicio"},
+            3: {"text": "Ir hacia el mar", "siguiente": "final"}
         }
     },
     "rio": {

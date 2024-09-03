@@ -11,4 +11,4 @@ class History:
         return text
     
     def get_next_history_part(self, key_option):
-        return self.opciones.keys()
+        return self.opciones[key_option]["siguiente"]
