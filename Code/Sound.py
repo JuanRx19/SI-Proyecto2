@@ -5,9 +5,8 @@ load_dotenv()
 path = os.path.abspath(os.getenv("sounds_path"))
 
 class Sound:
-  def __init__(self, sonido, posicion, ganancia, velocidad):
-    openal.oalInit()
-    self.buffer = openal.oalOpen('/'.join([path, sonido]))
+  def __init__(self, name, posicion, ganancia, velocidad):
+    self.buffer = openal.oalOpen('/'.join([path, name]))
     self.buffer.set_position(posicion)
     self.buffer.set_gain(ganancia)
     self.buffer.set_velocity(velocidad)
@@ -16,4 +15,3 @@ class Sound:
     self.buffer.play()
     while self.buffer.get_state() == openal.AL_PLAYING:
       pass
-    openal.oalQuit()

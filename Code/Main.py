@@ -1,27 +1,26 @@
 from History import History
-from Sound import Sound
 from Narrative import get_narrative
+import openal
 
 def main():
   #Inicio de la historia
+  openal.oalInit()
   current_history_part = "inicio"
   narrative = get_narrative()
   key_history = narrative[current_history_part]
-  story = History(key_history["text"], key_history["sounds"], key_history["options"])
-  sound = Sound(story.sonido, key_history["sounds_config"][0], key_history["sounds_config"][1], key_history["sounds_config"][2])
+  story = History(key_history["text"], key_history["sounds_config"], key_history["options"])
   story.print_story()
-  sound.play()
+  story.sonido.play()
   key_option = int(input())
   
   #Ciclo que itera la historia, hasta el final
   while(story.get_next_history_part(key_option) != "final"):
     current_history_part = story.get_next_history_part(key_option)
     key_history = narrative[current_history_part]
-    story = History(key_history["text"], key_history["sounds"], key_history["options"])
-    sound = Sound(story.sonido, key_history["sounds_config"][0], key_history["sounds_config"][1], key_history["sounds_config"][2])
+    story = History(key_history["text"], key_history["sounds_config"], key_history["options"])
     story.print_story()
-    sound.play()
+    story.sonido.play()
     key_option = int(input())
-    
+  openal.oalQuit()
   
 main()
