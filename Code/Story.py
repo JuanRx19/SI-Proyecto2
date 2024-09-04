@@ -8,11 +8,12 @@ openal.Listener.position = (0, 0, 0)
 openal.Listener.orientation = ((0, 0, -1), (0, 1, 0))
 
 # Abrir el archivo de sonido
-sound = openal.oalOpen("C:/Users/USER/OneDrive/Documentos/Universidad Javeriana/S8/SI2/SI-Proyecto2/Sounds/disparo.wav")
+sound = openal.oalOpen("C:/Users/USER/OneDrive/Documentos/Universidad Javeriana/S8/SI2/SI-Proyecto2/Sounds/[MONO] sonido-ataque-final.wav")
 
 # Ajustar el volumen (ganancia) de la fuente
-sound.set_gain(0.05)
-sound.set_looping(True)
+sound.set_gain(0.5)
+sound.set_position((0, 0, 0))
+sound.set_velocity((0, 0, 0))
 # Establecer la posición de la fuente de sonido en 3D
 #sound.set_position((10, 0, 0))  # 1 unidad a la derecha del oyente
 

@@ -20,13 +20,21 @@ def main():
   key_option = int(input())
   
   #Ciclo que itera la historia, hasta el final
-  while(story.get_next_history_part(key_option) != "final"):
+  while(len(narrative[story.get_next_history_part(key_option)]["options"]) > 0):
     current_history_part = story.get_next_history_part(key_option)
     key_history = narrative[current_history_part]
     story = History(key_history["text"], key_history["sounds_config"], key_history["options"])
     story.print_story()
     story.sounds.play()
     key_option = int(input())
+    
+  #FINAL
+  current_history_part = story.get_next_history_part(key_option)
+  key_history = narrative[current_history_part]
+  story = History(key_history["text"], key_history["sounds_config"], key_history["options"])
+  story.print_story()
+  story.sounds.play()
+  
   openal.oalQuit()
   
 main()
