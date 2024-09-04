@@ -208,7 +208,7 @@ def get_narrative():
     },
     "contraatacar": {
         "text": "Realizas un contraataque para anular el rayo de energía oscura que el anciano te había lanzado. El anciano sonríe, admirando tu velocidad.",
-        "sounds_config": SoundConfigure([Sound("sonido-pelea.wav", (10, 0, 0), 0.4, (0, 0, 0)), Sound("risa-anciano.wav", (0, 0, 0), 0.4, (0, 0, 0))]),
+        "sounds_config": SoundConfigure([Sound("sonido-finalflash.wav", (10, 0, 0), 0.4, (0, 0, 0)), Sound("risa-anciano.wav", (0, 0, 0), 0.4, (0, 0, 0))]),
         "options": {
             1: {"text": "Usar un ataque final", "siguiente": "ataqueFinal"},
             2: {"text": "Esperar el próximo movimiento del anciano", "siguiente": "esperarMovimiento"}
