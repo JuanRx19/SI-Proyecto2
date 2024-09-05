@@ -14,5 +14,3 @@ Integrantes:
 
 2. The narrative is composed by a dictionary which contains: the text, the sound configuration and the options, these last ones contain the key of the next element.
 All audios had to be set to mono in order to be used with OpenAL and 3D sound. The SoundNoEdit folder contains the audios before being converted to mono and the Sounds folder already has the audios converted to mono.
-
-Translated with DeepL.com (free version)
