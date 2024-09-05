@@ -3,7 +3,7 @@
 Integrantes:
 - José Manuel García L.
 - Juan Miguel Rojas
-- 
+
 1. 3 classes were created to manage the history, the audios and the playback of the audios.
 1.1 The history class is in charge of mapping the story with its corresponding narrative, options and audios. 
 1.2 The Sound class is in charge of obtaining the audio information and saves its corresponding information.
